@@ -1,6 +1,7 @@
 const container = document.querySelector('.container');
 const inputNumber = document.querySelector('#input');
 const div = document.querySelectorAll('div');
+const size = document.querySelector('#size')
 let rgb = ``;
 let inputValue = 16;
 let rainbow = 1;
@@ -33,6 +34,7 @@ inputNumber.addEventListener('change', function(){
     removeCurrentGrid(); 
     inputValue = document.querySelector('#input').value;
     createGrid();
+    size.textContent = `${inputValue} x ${inputValue}`
 });
 
 function randomNumber(){    
